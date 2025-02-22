@@ -1,0 +1,143 @@
+.header-main-one .thumbnail a {
+    padding: 16px 0;
+}
+.bg-1 {
+    background: #2B3970;
+}
+
+#menu-btn {
+    background: #19875442;
+    height: 55px;
+    width: 55px;
+    padding: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bg-about-sm-shape::before {
+    display: none;
+}
+.bg-about-sm-shape::after {
+    display: none;
+}
+.rts-client-feedback::after {
+    display: none;
+}
+.rts-map-area::after {
+    display: none;
+}
+.about-success-wrapper .single p.details {
+    font-size: 16px;
+    color: #1C2539;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.service-one-inner {
+&.one {
+    &::before {
+        position: absolute;
+        content: "";
+        width: 90%;
+        height: 1px;
+        background: #0001;
+        bottom: 0;
+        left: 13%;
+        display: none!important;
+    }
+}
+
+&.two {
+    &::before {
+        position: absolute;
+        content: '';
+        width: 103%;
+        height: 1px;
+        background: #0001;
+        bottom: 0;
+        left: 0;
+        display: none!important;
+    }
+}
+
+&.three {
+    &::before {
+        position: absolute;
+        content: '';
+        width: 103%;
+        height: 1px;
+        background: #0001;
+        bottom: 0;
+        left: 0;
+        display: none!important;
+    }
+
+    &::after {
+        display: none;
+        display: none!important;
+    }
+}
+
+&.four {
+    &::after {
+        position: absolute;
+        content: '';
+        height: 71%;
+        width: 1px;
+        background: #0001;
+        right: -15px;
+        display: none!important;
+    }
+}
+
+&.five {
+    &::after {
+        position: absolute;
+        content: '';
+        height: 71%;
+        width: 1px;
+        background: #0001;
+        right: -15px;
+        display: none!important;
+    }
+}
+
+&.six {
+    &::after {
+        position: absolute;
+        content: '';
+        height: 71%;
+        width: 1px;
+        background: #0001;
+        right: -15px;
+        display: none;
+
+    }
+}
+}
+.service-one-inner::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 1px;
+    background: #0001;
+    right: -15px;
+    display: none ;
+}
+.service-two-inner::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 1px;
+    background: #0001;
+    right: -15px;
+    display: none ;
+}
+@media only screen and (max-width: 767px) {
+    .banner-one-inner {
+        width: 90%;
+        padding: 15px;
+    }
+    .banner-one .swiper-wrapper .swiper-slide  {
+       background:#19875417 ;
+    }
+}
