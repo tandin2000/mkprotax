@@ -49,10 +49,14 @@ function BannerOne() {
                                 <p className="disc banner-para">
                                 Founded in British Columbia in 2024, Pro Tax was built on the idea that tax and bookkeeping <br/>services should be straightforward and accessible
                                 </p>
+                                <div class="flex">
                                 <a href="/our-service" className="rts-btn btn-primary color-h-black">
                                 See What We Offer
                                 </a>
-                               
+                                <a href="/contactus" className="rts-btn btn-primary color-h-black">
+                                Contact us
+                                </a>
+                                </div>
                             </div>
                             {/* banner single content end */}
                         </SwiperSlide>
