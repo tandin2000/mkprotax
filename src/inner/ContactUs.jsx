@@ -18,7 +18,7 @@ function ContactUs() {
             <Breadcrumb title="Contact Us" breadcrumbs={breadcrumbs} />
 
             {/* contact single area start */}
-            <div className="rts-contact-area rts-section-gap">
+            <div className="rts-contact-area " style={{marginTop:'80px'}}>
                 <div className="container">
                     <div className="row g-5">
                         {/* single contact area */}
@@ -80,30 +80,8 @@ function ContactUs() {
                     </div>
                 </div>
             </div>
-            {/* conact single area end */}
-            {/* bizup map area start */}
-            <div className="rts-contact-map-area">
-                <div className="contaciner-fluid">
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="contact-map-area-fluid">
-                                <iframe
-                                    className="contact-map"
-                                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14602.288851207937!2d90.47855065!3d23.798243149999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1663151706353!5m2!1sen!2sbd"
-                                    style={{ border: 0 }}
-                                    allowFullScreen=""
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                />
-                               
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* bizup map area end */}
-            {/* conact us form fluid start */}
-            <div className="rts-contact-form-area">
+
+            <div className="rts-contact-form-area rts-section-gap">
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
@@ -148,6 +126,30 @@ function ContactUs() {
                     </div>
                 </div>
             </div>
+            {/* conact single area end */}
+            {/* bizup map area start */}
+            <div className="rts-contact-map-area">
+                <div className="contaciner-fluid">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="contact-map-area-fluid">
+                                <iframe
+                                    className="contact-map"
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14602.288851207937!2d90.47855065!3d23.798243149999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1663151706353!5m2!1sen!2sbd"
+                                    style={{ border: 0 }}
+                                    allowFullScreen=""
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                />
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* bizup map area end */}
+            {/* conact us form fluid start */}
+         
             {/* conact us form fluid end */}
 
             <FooterOne />

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Nav from './Nav';
 import SideMenu from './SideMenu';
+import Accessibility from "../../accessibility";
 
 
 function HeaderOne() {
@@ -98,7 +99,7 @@ function HeaderOne() {
                             <div className="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-4">
                                 <div className="thumbnail">
                                     <Link to={'/'} >
-                                        <img src="/assets/images/logo/logo-1.svg" alt="protax-logo" style={{width:'200px'}} />
+                                        <img src="/assets/images/logo/logo-1.svg" alt="protax-logo" className='logo' style={{width:'200px',}} />
                                     </Link>
                                 </div>
                             </div>
@@ -131,7 +132,7 @@ function HeaderOne() {
             </header>
 
             {/* End header area */}
-           
+            <Accessibility />
 
             <div id="anywhere-home" className={isSearchVisible ? 'bgshow' : ''} onClick={handleBackgroundClick}></div>
 

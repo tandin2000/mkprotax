@@ -1,3 +1,14 @@
+:root {
+    --base-font-size: 1.2rem;
+    --h1-size: 4.5rem;
+    --h3-size: 2.5rem;
+    --h4-size: 1.5rem;
+    --h5-size: 1.25rem;
+    --h6-size: 1rem;
+    --button-font-size: 1rem;
+    /* Add any other sizes as needed */
+  }
+
 .header-main-one .thumbnail a {
     padding: 16px 0;
 }
@@ -140,4 +151,14 @@
     .banner-one .swiper-wrapper .swiper-slide  {
        background:#19875417 ;
     }
+}
+.logo {
+    margin-top:20px;
+}
+.flex {
+    display: flex;
+    gap: 15px;;
+}
+body {
+    overflow-x:hidden!important;
 }

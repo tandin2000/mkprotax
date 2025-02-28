@@ -1,0 +1,126 @@
+/* Floating Accessibility Button */
+.floating-button {
+	position: fixed;
+	top: 100px;
+	right: 10px;
+	background-color: #4466bb;
+	color: white;
+	border-radius: 50%;
+	width: 55px;
+	height: 55px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+	cursor: pointer;
+	border: none;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	z-index: 999999999;
+	cursor: pointer;
+	padding-top: 0px;
+  }
+  
+  .floating-button:hover {
+	background-color: #335599;
+  }
+  
+  /* Accessibility Menu */
+  .accessibility-menu {
+	position: fixed;
+	top: 50px;
+	right: 80px;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	width: 250px;
+	padding: 20px;
+	z-index: 1000;
+	border: 1px solid #ccc;
+	z-index: 99999999;
+  }
+  
+  .accessibility-menu h3 {
+	font-size: 18px;
+	margin-bottom: 10px;
+  }
+  
+  .accessibility-menu button {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 8px 12px;
+	font-size: 16px;
+	width: 100%;
+	background: none;
+	border: none;
+	color: #333;
+	cursor: pointer;
+	border-bottom: 1px solid #eee;
+  }
+  
+  .accessibility-menu button:hover {
+	background-color: #f0f0f0;
+  }
+  
+  .accessibility-menu .close-button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: none;
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
+	color: #999;
+  }
+  
+  .accessibility-menu .close-button:hover {
+	color: #333;
+  }
+  
+  /* Custom styles for icons */
+  .accessibility-menu button::before {
+	margin-right: 8px;
+  }
+  
+  /* Additional styles based on user design */
+  .accessibility-menu button .icon {
+	margin-right: 8px;
+  }
+  
+  .accessibility-button .icon {
+	font-size: 34px!important;
+	cursor: pointer!important;
+  }
+  .fa-universal-access {
+	cursor: pointer!important;
+  }
+  .accessibility-menu .close-button {
+	position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #999;
+    width: 10px;
+    padding: 0;
+    height: 10px;
+  }
+  
+  .accessibility-menu .close-button:hover {
+	color: #333;
+  }
+
+  .text-scale-1 { font-size: 1rem; }
+.text-scale-1-1 { font-size: 1.1rem; }
+.text-scale-1-2 { font-size: 1.2rem; }
+/* Add more classes as needed */
+
+.line-height-1 { line-height: 1; }
+.line-height-1-1 { line-height: 1.1; }
+.line-height-1-2 { line-height: 1.2; }
+/* Add more classes as needed */
+.fa-universal-access {
+	font-size: 34px!important;
+}
