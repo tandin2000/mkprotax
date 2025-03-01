@@ -16,7 +16,7 @@ function FooterTwo() {
                                         Work With Us?
                                     </h3>
                                     <p className="disc">
-                                    We know taxes and bookkeeping can be overwhelming but they don’t have to be. At Pro Tax, we make it simple, fast, and stress-free, so you can focus on what matters most. 
+                                    We know taxes and bookkeeping can be overwhelming but they don’t have to be. At MKPro Tax, we make it simple, fast, and stress-free, so you can focus on what matters most. 
 
                                     </p>
                                   

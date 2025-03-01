@@ -46,13 +46,13 @@ function BannerOne() {
                             {/* banner single content */}
                             <div className="banner-one-inner text-start">
                                 <p className="pre-title">
-                                    <span>Welcome!</span> to Pro Tax
+                                    <span>Welcome!</span> to MKPro Tax
                                 </p>
                                 <h1 className="title ">
                                 Tax & Bookkeeping <br/>Made Simple
                                 </h1>
                                 <p className="disc banner-para">
-                                Founded in British Columbia in 2024, Pro Tax was built on the idea that tax and bookkeeping <br/>services should be straightforward and accessible
+                                Founded in British Columbia in 2024, MKPro Tax was built on the idea that tax and bookkeeping <br/>services should be straightforward and accessible
                                 </p>
                                 <div class="flex">
                                 <a href="/our-service" className="rts-btn btn-primary color-h-black">

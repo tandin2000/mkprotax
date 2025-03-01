@@ -39,7 +39,7 @@ function TestimonialOne() {
                                         <SwiperSlide>
                                             <div className="testimonial-inner">
                                                 <p className="disc text-start">
-                                                    “I had a great experience with MK Pro Tax for my income tax filing. They were quick, efficient, and really knew their stuff. The team was also very patient and took the time to answer all my questions. I highly recommend them!”
+                                                    “I had a great experience with MKPro Tax for my income tax filing. They were quick, efficient, and really knew their stuff. The team was also very patient and took the time to answer all my questions. I highly recommend them!”
                                                 </p>
                                                 <div className="testimonial-bottom-one">
                                                     <div className="thumbnail">
@@ -60,7 +60,7 @@ function TestimonialOne() {
                                         <SwiperSlide>
                                             <div className="testimonial-inner">
                                                 <p className="disc text-start">
-                                                    “MK Pro Tax made tax filing so easy and stress-free. Their staff is knowledgeable, professional, and incredibly helpful. They explained everything clearly and made sure I got the best outcome. I truly appreciate their excellent service!”
+                                                    “MKPro Tax made tax filing so easy and stress-free. Their staff is knowledgeable, professional, and incredibly helpful. They explained everything clearly and made sure I got the best outcome. I truly appreciate their excellent service!”
                                                 </p>
                                                 <div className="testimonial-bottom-one">
                                                     <div className="thumbnail">
@@ -81,7 +81,7 @@ function TestimonialOne() {
                                         <SwiperSlide>
                                             <div className="testimonial-inner">
                                                 <p className="disc text-start">
-                                                    “Fantastic service from MK Pro Tax! They are fast, reliable, and really understand tax laws. The team is also very kind and understanding, which made the whole process smooth and hassle-free. I will definitely be coming back next year!”
+                                                    “Fantastic service from MKPro Tax! They are fast, reliable, and really understand tax laws. The team is also very kind and understanding, which made the whole process smooth and hassle-free. I will definitely be coming back next year!”
                                                 </p>
                                                 <div className="testimonial-bottom-one">
                                                     <div className="thumbnail">

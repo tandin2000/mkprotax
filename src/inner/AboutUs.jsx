@@ -80,7 +80,7 @@ function OurService() {
                                 {/* inner start */}
                                 <div className="inner">
                                     <p className="disc">
-                                    Founded in British Columbia in 2024, Pro Tax was built on the idea that tax and bookkeeping services should be straightforward and accessible. Our team is made up of experienced professionals who genuinely care about helping you navigate your finances with ease. We combine knowledge, technology, and a personal touch to provide solutions that make sense—without the stress or confusion.
+                                    Founded in British Columbia in 2024, MKPro Tax was built on the idea that tax and bookkeeping services should be straightforward and accessible. Our team is made up of experienced professionals who genuinely care about helping you navigate your finances with ease. We combine knowledge, technology, and a personal touch to provide solutions that make sense—without the stress or confusion.
 
                                     </p>
                                     <div className="row about-success-wrapper">

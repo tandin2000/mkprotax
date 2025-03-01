@@ -10900,7 +10900,7 @@ body {
 }
 .rts-title-area::after {
   position: absolute;
-  content: "Pro Tax";
+  content: "MKPro Tax";
   left: -14%;
   top: -70%;
   color: #ffffff;

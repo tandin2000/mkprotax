@@ -31,7 +31,7 @@ function AboutOne() {
                             </div>
                             <div className="about-inner">
                                 <p className="disc">
-                                Navigating taxes and finances can be confusing. That’s why we keep things simple and speak your language, not just numbers and jargon. We take the time to understand your situation and offer solutions that actually make sense. At Pro Tax, you’re not just another file, you’re a person, and we’re here to make things easier for you.
+                                Navigating taxes and finances can be confusing. That’s why we keep things simple and speak your language, not just numbers and jargon. We take the time to understand your situation and offer solutions that actually make sense. At MKPro Tax, you’re not just another file, you’re a person, and we’re here to make things easier for you.
 
                                 </p>
                                 {/* start about success area */}
