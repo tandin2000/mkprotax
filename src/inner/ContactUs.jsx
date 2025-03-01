@@ -1,11 +1,65 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import HeaderOne from "../components/header/HeaderOne";
 import { Link } from 'react-router-dom';
 import FooterOne from "../components/footer/FooterTwo";
 import Breadcrumb from "./Breadcrumb";
+import emailjs from "@emailjs/browser";
 
 function ContactUs() {
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+        file: null,
+    });
+
+    const [loading, setLoading] = useState(false);
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleFileChange = (e) => {
+        setFormData({ ...formData, file: e.target.files[0] });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setLoading(true); // Disable button and show "Sending..."
+
+        const templateParams = {
+            name: formData.name,
+            email: formData.email,
+            subject: formData.subject,
+            message: formData.message,
+        };
+
+        emailjs
+            .send(
+                "service_qjy567b", // Replace with your EmailJS service ID
+                "template_7siibsi", // Replace with your EmailJS template ID
+                templateParams,
+                "FbpkiU24DVSIxTqYa" // Replace with your EmailJS public key
+            )
+            .then(
+                (response) => {
+                    // alert("Message sent successfully!");
+                    // console.log("Email sent:", response);
+                    setLoading(false); // Re-enable button
+
+                    setFormData({ name: "", email: "", subject: "", message: "", file: null });
+                },
+                (error) => {
+                    // alert("Failed to send message. Please try again.");
+                    setLoading(false); // Re-enable button
+
+                    console.error("Email error:", error);
+                }
+            );
+    };
+
     const breadcrumbs = [
         { label: 'Home', link: '/' },
         { label: 'Contact Us' }
@@ -88,36 +142,47 @@ function ContactUs() {
                             <div className="rts-contact-fluid rts-section-gap">
                                 <div className="rts-title-area contact-fluid text-center mb--50">
                                     <p className="pre-title">Get In Touch</p>
-                                    <h2 className="title">Needs Help? Let’s Get in Touch</h2>
+                                    <h2 className="title">Need Help? Book An Appointment</h2>
                                 </div>
                                 <div className="form-wrapper">
                                     <div id="form-messages" />
-                                    <form id="contact-form">
+                                    <form onSubmit={handleSubmit}>
                                         <div className="name-email">
                                             <input
                                                 type="text"
                                                 name="name"
                                                 placeholder="Your Name"
-                                                required=""
+                                                required
+                                                value={formData.name}
+                                                onChange={handleChange}
                                             />
                                             <input
                                                 type="email"
                                                 name="email"
                                                 placeholder="Email Address"
-                                                required=""
+                                                required
+                                                value={formData.email}
+                                                onChange={handleChange}
                                             />
                                         </div>
-                                        <input type="text" name="subject" placeholder="Your Subject" />
-                                      
+                                        <input
+                                            type="text"
+                                            name="subject"
+                                            placeholder="Your Subject"
+                                            value={formData.subject}
+                                            onChange={handleChange}
+                                        />
                                         <textarea
                                             placeholder="Type Your Message"
                                             name="message"
-                                            defaultValue={""}
+                                            value={formData.message}
+                                            onChange={handleChange}
                                         />
-                                        <br/> <br/>
-                                       <input type="file" accept="image/*" />
-                                        <button type="submit" className="rts-btn btn-primary">
-                                            Send Message
+                                        <br />
+                                        <br />
+                                        {/* <input type="file" accept="image/*" onChange={handleFileChange} /> */}
+                                        <button type="submit" className="rts-btn btn-primary" disabled={loading}>
+                                            {loading ? "Sending..." : "Send Message"}
                                         </button>
                                     </form>
                                 </div>
@@ -133,14 +198,16 @@ function ContactUs() {
                     <div className="row">
                         <div className="col-12">
                             <div className="contact-map-area-fluid">
+
                                 <iframe
                                     className="contact-map"
-                                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14602.288851207937!2d90.47855065!3d23.798243149999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1663151706353!5m2!1sen!2sbd"
-                                    style={{ border: 0 }}
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2604.5338838227917!2d-123.0658933!3d49.233507899999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673de8b7be8cd%3A0x587c9e1e0f9aa542!2s5457%20Victoria%20Dr%2C%20Vancouver%2C%20BC%20V5P%203V9%2C%20Canada!5e0!3m2!1sen!2sca!4v1709150000000"
+                                    style={{ border: 0}}
                                     allowFullScreen=""
                                     loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"
                                 />
+
                                
                             </div>
                         </div>
