@@ -1,12 +1,16 @@
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import HeaderOne from "../components/header/HeaderOne";
 import { Link } from 'react-router-dom';
 import FooterOne from "../components/footer/FooterTwo";
 import Breadcrumb from "./Breadcrumb";
 import emailjs from "@emailjs/browser";
+import { useLocation } from "react-router-dom";
+
 
 function ContactUs() {
+    const location = useLocation();
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -64,6 +68,16 @@ function ContactUs() {
         { label: 'Home', link: '/' },
         { label: 'Contact Us' }
     ];
+    useEffect(() => {
+        if (location.state?.scrollToMiddle) {
+            setTimeout(() => {
+                window.scrollTo({
+                    top: document.body.scrollHeight / 4.5,
+                    behavior: "smooth",
+                });
+            }, 100); // Small delay for smoother transition
+        }
+    }, [location]);
     return (
         <div className=''>
 

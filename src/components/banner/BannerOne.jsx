@@ -5,11 +5,16 @@ import { Navigation, Scrollbar, A11y, EffectFade, Autoplay } from 'swiper/module
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
-
+import { useNavigate } from "react-router-dom";
 
 
 
 function BannerOne() {
+    const navigate = useNavigate();
+
+    const handleNavigation = () => {
+        navigate("/contactus", { state: { scrollToMiddle: true } });
+    };
     return (
         <div>
             {/* banner blank space area */}
@@ -53,9 +58,12 @@ function BannerOne() {
                                 <a href="/our-service" className="rts-btn btn-primary color-h-black">
                                 See What We Offer
                                 </a>
-                                <a href="/contactus" className="rts-btn btn-primary color-h-black">
+                                <a onClick={handleNavigation} className="rts-btn btn-primary color-h-black" style={{ cursor: "pointer" }}>
                                 Book an Appointment
                                 </a>
+                                {/* <button onClick={handleNavigation} className="rts-btn btn-primary color-h-black">
+                                    Book an Appointment
+                                </button> */}
                                 </div>
                             </div>
                             {/* banner single content end */}
