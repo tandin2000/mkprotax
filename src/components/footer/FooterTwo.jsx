@@ -79,7 +79,7 @@ function FooterTwo() {
                                             </div>
                                             <div className="disc">
                                                 <span>Call Us 24/7</span>
-                                                <Link to={'#'}>+1 (604) 356-1949</Link>
+                                                <Link to={'tel:+16043561949'}>+1 (604) 356-1949</Link>
                                             </div>
                                         </div>
                                         <div className="contact-info-1">
@@ -88,7 +88,7 @@ function FooterTwo() {
                                             </div>
                                             <div className="disc">
                                                 <span>Work with us</span>
-                                                <Link to={'#'}>info@protax.com</Link>
+                                                <Link to={'mailto:info@mkprotax.ca'}>info@mkprotax.ca</Link>
                                             </div>
                                         </div>
                                     </div>
@@ -105,9 +105,9 @@ function FooterTwo() {
                                             </div>
                                             <div className="disc">
                                                 <span>Our Location</span>
-                                                <Link to={'#'}>
-                                                    XYZ Hilton Street, 125 Town <br />
-                                                    Canada
+                                                <Link to={'https://www.google.com/maps?q=5457+Victoria+Drive,+Vancouver,+BC+V5P+3V9'} target="_blank" rel="noopener noreferrer">
+                                                    5457 Victoria Drive, Vancouver <br />
+                                                    V5P 3V9, British Columbia
                                                 </Link>
                                             </div>
                                         </div>

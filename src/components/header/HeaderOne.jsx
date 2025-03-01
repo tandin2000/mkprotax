@@ -52,13 +52,15 @@ function HeaderOne() {
                             <div className="col-lg-6 d-xl-block d-none">
                                 <div className="left">
                                     <div className="mail">
-                                        <Link to={'mailto:webmaster@example.com'}>
-                                            <i className="fal fa-envelope" /> info@protax.com
+
+                                        <Link to={'mailto:info@mkprotax.ca'}><i className="fal fa-envelope" /> 
+                                            info@mkprotax.ca
                                         </Link>
+
                                     </div>
                                     <div className="working-time">
                                         <p>
-                                            <i className="fal fa-phone" /> +1 (604) 356-1949
+                                            <a href="tel:+16043561949"><i className="fal fa-phone" />+1 (604) 356-1949</a>
                                         </p>
                                     </div>
                                 </div>
@@ -99,7 +101,7 @@ function HeaderOne() {
                             <div className="col-xl-3 col-lg-4 col-md-4 col-sm-4 col-4">
                                 <div className="thumbnail">
                                     <Link to={'/'} >
-                                        <img src="/assets/images/logo/logo-1.svg" alt="protax-logo" className='logo' style={{width:'200px',}} />
+                                        <img src="/assets/images/logo/logo-1.svg" alt="protax-logo" className='logo' style={{width:'200px'}} />
                                     </Link>
                                 </div>
                             </div>

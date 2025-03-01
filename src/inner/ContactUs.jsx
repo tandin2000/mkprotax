@@ -69,8 +69,8 @@ function ContactUs() {
                                     </div>
                                     <div className="info">
                                         <span>Address</span><br/>
-                                        XYZ Hilton Street, 125 Town<br/>
-                                        Canada
+                                        5457 Victoria Drive, Vancouver <br />
+                                        V5P 3V9, British Columbia
                                         <br/>  <br/>  
                                     </div>
                                 </div>

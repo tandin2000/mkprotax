@@ -54,7 +54,7 @@ function BannerOne() {
                                 See What We Offer
                                 </a>
                                 <a href="/contactus" className="rts-btn btn-primary color-h-black">
-                                Contact us
+                                Book an Appointment
                                 </a>
                                 </div>
                             </div>

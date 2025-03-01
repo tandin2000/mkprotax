@@ -55,13 +55,13 @@ function SideMenu({ isSidebarOpen, toggleSidebar }) {
                                 {/* single */}
                                 <div className="single">
                                     <i className="fas fa-phone-alt" />
-                                    <Link href="#">+1 (604) 356-1949</Link>
+                                    <Link to={'tel:+16043561949'}>+1 (604) 356-1949</Link>
                                 </div>
                                 {/* single ENd */}
                                 {/* single */}
                                 <div className="single">
                                     <i className="fas fa-envelope" />
-                                    <Link href="#">info@protax.com</Link>
+                                    <Link to={'mailto:info@mkprotax.ca'}>info@mkprotax.ca</Link>
                                 </div>
                                 {/* single ENd */}
                                
