@@ -8,6 +8,11 @@ require('dotenv').config();
 
 const app = express();
 
+// Health check route
+app.get('/health', (req, res) => {
+    res.status(200).json({ status: 'ok', message: 'Server is running' });
+});
+
 // Ensure uploads directory exists
 const uploadsDir = path.join(__dirname, '../public/uploads');
 fs.ensureDirSync(uploadsDir);
@@ -39,9 +44,11 @@ app.use(session({
 // Routes
 const authRoutes = require('./routes/auth');
 const adminRoutes = require('./routes/admin');
+const publicRoutes = require('./routes/public');
 
 app.use('/auth', authRoutes);
 app.use('/admin', adminRoutes);
+app.use('/api', publicRoutes);
 
 // Home route
 app.get('/', (req, res) => {
