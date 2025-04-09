@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import LoadTop from '../components/LoadTop';
 import BackToTop from '../components/BackToTop';
+import NewsMarquee from '../components/NewsMarquee';
 import HomeOne from "./HomeOne";
 import Testimonial from '../inner/Testimonial';
 // inner pages
@@ -16,6 +17,7 @@ function RouterPage() {
         <div>
             <Router>
                 <LoadTop />
+                <NewsMarquee />
                 <Routes>
                     <Route path="/" element={<HomeOne />}></Route>
                     <Route path="/about-us" element={<AboutUs />}></Route>

@@ -12,10 +12,17 @@ router.get('/banner', async (req, res) => {
     try {
         const settingsPath = path.join(__dirname, '../../data/settings/settings.json');
         const settings = await fs.readJson(settingsPath);
+        
+        // Add full URL to image paths
+        const bannersWithFullUrl = settings.banners.map(banner => ({
+            ...banner,
+            imageUrl: `${req.protocol}://${req.get('host')}${banner.imageUrl}`
+        }));
+
         res.json({
             status: 'success',
             message: 'Banner information retrieved successfully',
-            data: settings.banners || []
+            data: bannersWithFullUrl || []
         });
     } catch (error) {
         res.status(500).json({
