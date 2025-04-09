@@ -43,10 +43,7 @@ function SideMenu({ isSidebarOpen, toggleSidebar }) {
                     </Link>
                   
                     <div className="body d-none d-xl-block">
-                        <p className="disc">
-                            We must explain to you how all seds this mistakens idea denouncing
-                            pleasures and praising account.
-                        </p>
+                        
                         <div className="get-in-touch">
                             {/* title */}
                             <div className="h6 title">Get In Touch</div>

@@ -126,7 +126,7 @@ function FooterTwo() {
                             <div className="col-lg-12">
                                 <div className="copyright-h-2-wrapper">
                                     <p className="disc">
-                                        ProTax - Copyright 2025. All rights reserved. Developed By - <a href='https://orandbt.com' target='_blank' >Orandbt</a>
+                                        ProTax - Copyright 2025. All rights reserved. Developed & Maintained By - <a href='https://orandbt.com' target='_blank' >Orandbt</a>
 
                                     </p>
                                    
