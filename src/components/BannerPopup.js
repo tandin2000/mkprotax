@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './BannerPopup.css';
 
 const BannerPopup = ({ banners, onClose }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [imageLoaded, setImageLoaded] = useState(false);
+    const autoAdvanceTimer = useRef(null);
 
     const handleClose = () => {
         onClose();
@@ -14,6 +15,7 @@ const BannerPopup = ({ banners, onClose }) => {
         setCurrentIndex((prevIndex) => 
             prevIndex === banners.length - 1 ? 0 : prevIndex + 1
         );
+        resetAutoAdvanceTimer();
     };
 
     const handlePrev = () => {
@@ -21,6 +23,7 @@ const BannerPopup = ({ banners, onClose }) => {
         setCurrentIndex((prevIndex) => 
             prevIndex === 0 ? banners.length - 1 : prevIndex - 1
         );
+        resetAutoAdvanceTimer();
     };
 
     const handleBannerClick = (url) => {
@@ -29,7 +32,28 @@ const BannerPopup = ({ banners, onClose }) => {
 
     const handleImageLoad = () => {
         setImageLoaded(true);
+        resetAutoAdvanceTimer();
     };
+
+    const resetAutoAdvanceTimer = () => {
+        if (autoAdvanceTimer.current) {
+            clearTimeout(autoAdvanceTimer.current);
+        }
+        autoAdvanceTimer.current = setTimeout(() => {
+            handleNext();
+        }, 4000);
+    };
+
+    useEffect(() => {
+        if (banners.length > 1) {
+            resetAutoAdvanceTimer();
+        }
+        return () => {
+            if (autoAdvanceTimer.current) {
+                clearTimeout(autoAdvanceTimer.current);
+            }
+        };
+    }, [currentIndex, banners.length]);
 
     if (!banners.length) return null;
 
@@ -74,6 +98,7 @@ const BannerPopup = ({ banners, onClose }) => {
                             onClick={() => {
                                 setImageLoaded(false);
                                 setCurrentIndex(index);
+                                resetAutoAdvanceTimer();
                             }}
                         />
                     ))}
