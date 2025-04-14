@@ -8,7 +8,7 @@ const NewsMarquee = () => {
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                const response = await fetch('http://localhost:3001/api/news');
+                const response = await fetch('https://mkprotaxbe.onrender.com/api/news');
                 const data = await response.json();
                 if (data.status === 'success') {
                     setNews(data.data);

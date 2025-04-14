@@ -11,7 +11,7 @@ function App() {
     useEffect(() => {
         const fetchBanners = async () => {
             try {
-                const response = await fetch('http://localhost:3001/api/banner');
+                const response = await fetch('https://mkprotaxbe.onrender.com/api/banner');
                 const data = await response.json();
                 if (data.status === 'success') {
                     setBanners(data.data);
