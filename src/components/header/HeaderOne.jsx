@@ -5,7 +5,7 @@ import SideMenu from './SideMenu';
 import Accessibility from "../../accessibility";
 
 
-function HeaderOne() {
+function HeaderOne({officeHrs, socialUrls}) {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     const toggleSidebar = () => {
@@ -41,6 +41,8 @@ function HeaderOne() {
     const handleBackgroundClick = () => {
         setSearchVisible(false);
     };
+
+    console.log(socialUrls)
     return (
 
         <div>
@@ -69,22 +71,22 @@ function HeaderOne() {
                                 <div className="right">
                                     <ul className="top-nav">
                                     <li>
-                                            <Link to={'#'}>
+                                            <Link to={socialUrls?.facebook || "#"}>
                                                 <i className="fab fa-facebook-f" />
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="#">
+                                            <Link to={socialUrls?.whatsapp || "#"}>
                                                 <i className="fab fa-whatsapp" />
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to={'#'}>
+                                            <Link to={socialUrls?.instagram || "#"}>
                                                 <i className="fab fa-instagram" />
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link className="mr--0" to={'#'}>
+                                            <Link className="mr--0" to={socialUrls?.indeed || "#"}>
                                                 <i className="fab fa-linkedin-in" />
                                             </Link>
                                         </li>
@@ -140,7 +142,7 @@ function HeaderOne() {
 
 
 
-            <SideMenu isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
+            <SideMenu isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar}  officeHrs={officeHrs} socialUrls={socialUrls}/>
         </div>
     )
 }

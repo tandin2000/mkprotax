@@ -12,19 +12,19 @@ import Error from "../inner/Error";
 import ContactUs from '../inner/ContactUs';
 
 
-function RouterPage() {
+function RouterPage({officeHrs, socialUrls}) {
     return (
         <div>
             <Router>
                 <LoadTop />
                 <NewsMarquee />
                 <Routes>
-                    <Route path="/" element={<HomeOne />}></Route>
-                    <Route path="/about-us" element={<AboutUs />}></Route>
-                    <Route path="/our-service" element={<OurService />}></Route>
+                    <Route path="/" element={<HomeOne officeHrs={officeHrs} socialUrls={socialUrls}/>}></Route>
+                    <Route path="/about-us" element={<AboutUs officeHrs={officeHrs} socialUrls={socialUrls} />}></Route>
+                    <Route path="/our-service" element={<OurService officeHrs={officeHrs} socialUrls={socialUrls}/>}></Route>
                     <Route path="/404" element={<Error />}></Route>
-                    <Route path="/testimonial" element={<Testimonial />}></Route>
-                    <Route path="/contactus" element={<ContactUs />}></Route>
+                    <Route path="/testimonial" element={<Testimonial officeHrs={officeHrs} socialUrls={socialUrls}/>}></Route>
+                    <Route path="/contactus" element={<ContactUs officeHrs={officeHrs} socialUrls={socialUrls}/>}></Route>
                 </Routes>
                 <BackToTop />
             </Router>

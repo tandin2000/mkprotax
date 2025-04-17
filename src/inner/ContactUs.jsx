@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import HeaderOne from "../components/header/HeaderOne";
 import { Link } from 'react-router-dom';
@@ -8,7 +7,7 @@ import emailjs from "@emailjs/browser";
 import { useLocation } from "react-router-dom";
 
 
-function ContactUs() {
+function ContactUs({officeHrs, socialUrls}) {
     const location = useLocation();
 
     const [formData, setFormData] = useState({
@@ -78,10 +77,11 @@ function ContactUs() {
             }, 100); // Small delay for smoother transition
         }
     }, [location]);
+
     return (
         <div className=''>
 
-            <HeaderOne />
+            <HeaderOne  officeHrs={officeHrs} socialUrls={socialUrls}/>
 
             <Breadcrumb title="Contact Us" breadcrumbs={breadcrumbs} />
 
@@ -120,8 +120,11 @@ function ContactUs() {
                                     </div>
                                     <div className="info">
                                         <span>Office working hours</span><br/>
-                                        Monday - Friday: 9:00 AM – 5:00 PM <br/>Saturday: 9:00 AM – 12:00 PM
-                                        <br/>Sunday: Closed
+                                        {Object.entries(officeHrs).map(([day, hours]) => (
+                                            <div key={day}>
+                                                {day.charAt(0).toUpperCase() + day.slice(1)}: {hours.open} - {hours.close}
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
                             </div>

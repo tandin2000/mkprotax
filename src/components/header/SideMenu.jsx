@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-function SideMenu({ isSidebarOpen, toggleSidebar }) {
+function SideMenu({ isSidebarOpen, toggleSidebar , officeHrs, socialUrls }) {
 
     const [openMenu, setOpenMenu] = useState(null);
 
@@ -70,16 +70,16 @@ function SideMenu({ isSidebarOpen, toggleSidebar }) {
                                 {/* single ENd */}
                             </div>
                             <div className="social-wrapper-two menu">
-                                <Link href="#">
+                                <Link to={socialUrls?.facebook || "#"}>
                                     <i className="fab fa-facebook-f" />
                                 </Link>
-                                <Link href="#">
+                                <Link to={socialUrls?.instagram || "#"}>
                                     <i className="fab fa-instagram" />
                                 </Link>
-                                <Link href="#">
+                                <Link to={socialUrls?.whatsapp || "#"}>
                                     <i className="fab fa-whatsapp" />
                                 </Link>
-                                <Link className="mr--0" to={'#'}>
+                                <Link className="mr--0" to={socialUrls?.indeed || "#"}>
                                     <i className="fab fa-linkedin-in" />
                                 </Link>
                             </div>

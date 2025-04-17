@@ -9,7 +9,7 @@ import ServiceTen from "../components/service/ServiceTen";
 
 import FooterOne from "../components/footer/FooterTwo";
 
-function OurService() {
+function OurService({officeHrs, socialUrls}) {
     const breadcrumbs = [
         { label: 'Home', link: '/' },
         { label: 'Our Service' }
@@ -17,7 +17,7 @@ function OurService() {
     return (
         <div className=''>
 
-            <HeaderOne />
+            <HeaderOne officeHrs={officeHrs} socialUrls={socialUrls}/>
             <Breadcrumb title="Our Service" breadcrumbs={breadcrumbs} />
             <ServiceTen />
             <FooterOne />
