@@ -74,8 +74,8 @@ function HeaderOne() {
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to={'#'}>
-                                                <i className="fab fa-twitter" />
+                                            <Link href="#">
+                                                <i className="fab fa-whatsapp" />
                                             </Link>
                                         </li>
                                         <li>

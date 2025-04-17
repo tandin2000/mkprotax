@@ -74,15 +74,14 @@ function SideMenu({ isSidebarOpen, toggleSidebar }) {
                                     <i className="fab fa-facebook-f" />
                                 </Link>
                                 <Link href="#">
-                                    <i className="fab fa-twitter" />
-                                </Link>
-                                <Link href="#">
                                     <i className="fab fa-instagram" />
                                 </Link>
                                 <Link href="#">
                                     <i className="fab fa-whatsapp" />
                                 </Link>
-                                {/* <Link href="#"><i class="fab fa-linkedin"></i></Link> */}
+                                <Link className="mr--0" to={'#'}>
+                                    <i className="fab fa-linkedin-in" />
+                                </Link>
                             </div>
                         </div>
                     </div>

@@ -98,7 +98,7 @@ function ContactUs() {
                                         <img src="assets/images/contact/shape/01.svg" alt="" />
                                     </div>
                                     <div className="info">
-                                        <span>Call Us 24/7</span>
+                                        <span>Call Us @</span>
                                        <br/>
                                        
                                         <Link to={'tel:+16043561949'}>

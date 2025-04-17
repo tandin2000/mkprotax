@@ -1,7 +1,7 @@
 .news-marquee-container {
     background-color: #1a1a1a;
     color: #ffffff;
-    padding: 10px 0;
+    padding: 5px 0;
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -28,7 +28,7 @@
 .marquee-content {
     display: inline-block;
     white-space: nowrap;
-    animation: marquee 40s linear infinite;
+    animation: marquee 60s linear infinite;
 }
 
 .marquee-content:hover {
@@ -78,7 +78,7 @@
 
 @keyframes marquee {
     0% {
-        transform: translateX(500%);
+        transform: translateX(100%);
     }
     100% {
         transform: translateX(-100%);

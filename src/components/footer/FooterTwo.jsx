@@ -78,7 +78,7 @@ function FooterTwo() {
                                                 <i className="fas fa-phone-alt" />
                                             </div>
                                             <div className="disc">
-                                                <span>Call Us 24/7</span>
+                                                <span>Call Us @</span>
                                                 <Link to={'tel:+16043561949'}>+1 (604) 356-1949</Link>
                                             </div>
                                         </div>
