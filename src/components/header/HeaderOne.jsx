@@ -71,22 +71,22 @@ function HeaderOne({officeHrs, socialUrls}) {
                                 <div className="right">
                                     <ul className="top-nav">
                                     <li>
-                                            <Link to={socialUrls?.facebook || "#"}>
+                                            <Link to={socialUrls?.facebook || "#"} target="_blank" rel="noopener noreferrer">
                                                 <i className="fab fa-facebook-f" />
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to={socialUrls?.whatsapp || "#"}>
+                                            <Link to={socialUrls?.whatsapp || "#"} target="_blank" rel="noopener noreferrer">
                                                 <i className="fab fa-whatsapp" />
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to={socialUrls?.instagram || "#"}>
+                                            <Link to={socialUrls?.instagram || "#"} target="_blank" rel="noopener noreferrer">
                                                 <i className="fab fa-instagram" />
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link className="mr--0" to={socialUrls?.indeed || "#"}>
+                                            <Link className="mr--0" to={socialUrls?.indeed || "#"} target="_blank" rel="noopener noreferrer">
                                                 <i className="fab fa-linkedin-in" />
                                             </Link>
                                         </li>

@@ -70,16 +70,16 @@ function SideMenu({ isSidebarOpen, toggleSidebar , officeHrs, socialUrls }) {
                                 {/* single ENd */}
                             </div>
                             <div className="social-wrapper-two menu">
-                                <Link to={socialUrls?.facebook || "#"}>
+                                <Link to={socialUrls?.facebook || "#"} target="_blank" rel="noopener noreferrer">
                                     <i className="fab fa-facebook-f" />
                                 </Link>
-                                <Link to={socialUrls?.instagram || "#"}>
+                                <Link to={socialUrls?.instagram || "#"} target="_blank" rel="noopener noreferrer">
                                     <i className="fab fa-instagram" />
                                 </Link>
-                                <Link to={socialUrls?.whatsapp || "#"}>
+                                <Link to={socialUrls?.whatsapp || "#"} target="_blank" rel="noopener noreferrer">
                                     <i className="fab fa-whatsapp" />
                                 </Link>
-                                <Link className="mr--0" to={socialUrls?.indeed || "#"}>
+                                <Link className="mr--0" to={socialUrls?.indeed || "#"} target="_blank" rel="noopener noreferrer">
                                     <i className="fab fa-linkedin-in" />
                                 </Link>
                             </div>
@@ -120,19 +120,18 @@ function SideMenu({ isSidebarOpen, toggleSidebar , officeHrs, socialUrls }) {
                             </ul>
                         </nav>
                         <div className="social-wrapper-two menu mobile-menu">
-                            <Link href="#">
-                                <i className="fab fa-facebook-f" />
-                            </Link>
-                            <Link href="#">
-                                <i className="fab fa-twitter" />
-                            </Link>
-                            <Link href="#">
-                                <i className="fab fa-instagram" />
-                            </Link>
-                            <Link href="#">
-                                <i className="fab fa-whatsapp" />
-                            </Link>
-                            {/* <Link href="#"><i class="fab fa-linkedin"></i></Link> */}
+                                <Link to={socialUrls?.facebook || "#"} target="_blank" rel="noopener noreferrer">
+                                    <i className="fab fa-facebook-f" />
+                                </Link>
+                                <Link to={socialUrls?.instagram || "#"} target="_blank" rel="noopener noreferrer">
+                                    <i className="fab fa-instagram" />
+                                </Link>
+                                <Link to={socialUrls?.whatsapp || "#"} target="_blank" rel="noopener noreferrer">
+                                    <i className="fab fa-whatsapp" />
+                                </Link>
+                                <Link className="mr--0" to={socialUrls?.indeed || "#"} target="_blank" rel="noopener noreferrer">
+                                    <i className="fab fa-linkedin-in" />
+                                </Link>
                         </div>
                         <Link
                             href="#"
