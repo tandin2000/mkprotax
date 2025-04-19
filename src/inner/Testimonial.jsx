@@ -8,7 +8,7 @@ import FooterOne from "../components/footer/FooterTwo";
 
 
 
-function OurService() {
+function OurService({officeHrs, socialUrls}) {
     const breadcrumbs = [
         { label: 'Home', link: '/' },
         { label: ' Testimonial' }
@@ -46,7 +46,7 @@ function OurService() {
     return (
         <div className=''>
 
-            <HeaderOne />
+            <HeaderOne officeHrs={officeHrs} socialUrls={socialUrls}/>
             <Breadcrumb title="Testimonial" breadcrumbs={breadcrumbs} />
             {/* rts about us section start */}
             <div className="rts-about-area" style={{marginTop:'70px'}}>

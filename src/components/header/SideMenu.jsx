@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-function SideMenu({ isSidebarOpen, toggleSidebar }) {
+function SideMenu({ isSidebarOpen, toggleSidebar , officeHrs, socialUrls }) {
 
     const [openMenu, setOpenMenu] = useState(null);
 
@@ -70,19 +70,18 @@ function SideMenu({ isSidebarOpen, toggleSidebar }) {
                                 {/* single ENd */}
                             </div>
                             <div className="social-wrapper-two menu">
-                                <Link href="#">
+                                <Link to={socialUrls?.facebook || "#"} target="_blank" rel="noopener noreferrer">
                                     <i className="fab fa-facebook-f" />
                                 </Link>
-                                <Link href="#">
-                                    <i className="fab fa-twitter" />
-                                </Link>
-                                <Link href="#">
+                                <Link to={socialUrls?.instagram || "#"} target="_blank" rel="noopener noreferrer">
                                     <i className="fab fa-instagram" />
                                 </Link>
-                                <Link href="#">
+                                <Link to={socialUrls?.whatsapp || "#"} target="_blank" rel="noopener noreferrer">
                                     <i className="fab fa-whatsapp" />
                                 </Link>
-                                {/* <Link href="#"><i class="fab fa-linkedin"></i></Link> */}
+                                <Link className="mr--0" to={socialUrls?.indeed || "#"} target="_blank" rel="noopener noreferrer">
+                                    <i className="fab fa-linkedin-in" />
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -121,19 +120,18 @@ function SideMenu({ isSidebarOpen, toggleSidebar }) {
                             </ul>
                         </nav>
                         <div className="social-wrapper-two menu mobile-menu">
-                            <Link href="#">
-                                <i className="fab fa-facebook-f" />
-                            </Link>
-                            <Link href="#">
-                                <i className="fab fa-twitter" />
-                            </Link>
-                            <Link href="#">
-                                <i className="fab fa-instagram" />
-                            </Link>
-                            <Link href="#">
-                                <i className="fab fa-whatsapp" />
-                            </Link>
-                            {/* <Link href="#"><i class="fab fa-linkedin"></i></Link> */}
+                                <Link to={socialUrls?.facebook || "#"} target="_blank" rel="noopener noreferrer">
+                                    <i className="fab fa-facebook-f" />
+                                </Link>
+                                <Link to={socialUrls?.instagram || "#"} target="_blank" rel="noopener noreferrer">
+                                    <i className="fab fa-instagram" />
+                                </Link>
+                                <Link to={socialUrls?.whatsapp || "#"} target="_blank" rel="noopener noreferrer">
+                                    <i className="fab fa-whatsapp" />
+                                </Link>
+                                <Link className="mr--0" to={socialUrls?.indeed || "#"} target="_blank" rel="noopener noreferrer">
+                                    <i className="fab fa-linkedin-in" />
+                                </Link>
                         </div>
                         <Link
                             href="#"

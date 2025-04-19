@@ -8,11 +8,11 @@ import ServiceOne from "../components/service/ServiceOne";
 
 import Footer from "../components/footer/FooterTwo";
 
-function HomeOne() {
+function HomeOne({officeHrs, socialUrls}) {
   return (
     <div>
 
-      <HeaderOne />
+      <HeaderOne officeHrs={officeHrs} socialUrls={socialUrls}/>
       <BannerOne />
       <AboutOne />
       <ServiceOne />

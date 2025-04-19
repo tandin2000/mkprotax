@@ -62,10 +62,11 @@ const BannerPopup = ({ banners, onClose }) => {
     return (
         <div className="banner-popup-overlay">
             <div className="banner-popup-container">
-                <div className="banner-header">
+            <button className="close-button" onClick={handleClose}>×</button>
+                {/* <div className="banner-header">
                     <h2>Announcements</h2>
-                    <button className="close-button" onClick={handleClose}>×</button>
-                </div>
+                   
+                </div> */}
                 <div className="banner-wrapper">
                     <button onClick={handlePrev} className="nav-button prev-button">❮</button>
                     <div 
@@ -83,14 +84,7 @@ const BannerPopup = ({ banners, onClose }) => {
                             className={`banner-image ${imageLoaded ? 'loaded' : 'hidden'}`}
                             onLoad={handleImageLoad}
                         />
-                        <div className="banner-info">
-                            <h3>{currentBanner.title}</h3>
-                            <p>{currentBanner.description}</p>
-                        </div>
-                    </div>
-                    <button onClick={handleNext} className="nav-button next-button">❯</button>
-                </div>
-                <div className="banner-indicators">
+                        <div className="banner-indicators">
                     {banners.map((_, index) => (
                         <span 
                             key={index}
@@ -103,6 +97,16 @@ const BannerPopup = ({ banners, onClose }) => {
                         />
                     ))}
                 </div>
+                        {/* <div className="banner-info">
+                            <h3>{currentBanner.title}</h3>
+                            <p>{currentBanner.description}</p>
+                        </div> */}
+                    </div>
+                    <button onClick={handleNext} className="nav-button next-button">❯</button>
+
+                    
+                </div>
+               
             </div>
         </div>
     );

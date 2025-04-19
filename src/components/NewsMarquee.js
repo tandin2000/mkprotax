@@ -4,26 +4,49 @@ import './NewsMarquee.css';
 const NewsMarquee = () => {
     const [news, setNews] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                const response = await fetch('http://localhost:3001/api/news');
+                const response = await fetch('https://mkprotaxbe.onrender.com/api/news');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch news');
+                }
                 const data = await response.json();
-                if (data.status === 'success') {
+                if (data.status === 'success' && data.data.length > 0) {
                     setNews(data.data);
+                    setError(null);
+                } else {
+                    throw new Error('No news data available');
                 }
             } catch (error) {
                 console.error('Error fetching news:', error);
+                setError(error.message);
+                // Set some default news items if the fetch fails
+                setNews([
+                    { title: 'Welcome to ProTax - Your Tax Solution Partner' },
+                    { title: 'Stay tuned for important updates and announcements' }
+                ]);
             } finally {
                 setIsLoading(false);
             }
         };
 
         fetchNews();
+        // Set up periodic refresh every 5 minutes
+        const refreshInterval = setInterval(fetchNews, 300000);
+        return () => clearInterval(refreshInterval);
     }, []);
 
-    if (isLoading || !news.length) return null;
+    // Show loading state or error message briefly
+    if (isLoading) {
+        return (
+            <div className="news-marquee-container">
+                <div className="news-label">Loading News...</div>
+            </div>
+        );
+    }
 
     return (
         <div className="news-marquee-container">
