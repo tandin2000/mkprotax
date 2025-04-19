@@ -186,7 +186,8 @@ body {
     position: absolute;
     top: 45%!important;
     transform: translateY(-50%);
-    background-color: #328F1A!important;
+    background-color: transparent!important;
+    color:#328F1A!important;
 }
 .banner-indicators {
     display: flex
