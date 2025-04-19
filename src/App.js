@@ -13,7 +13,7 @@ function App() {
     useEffect(() => {
         const fetchBanners = async () => {
             try {
-                const response = await fetch('https://mkprotaxbe.onrender.com/api/banner');
+                const response = await fetch('https://mkprotaxbe-52je.onrender.com/api/banner');
                 const data = await response.json();
                 if (data.status === 'success') {
                     setBanners(data.data);
@@ -29,7 +29,7 @@ function App() {
     useEffect(() => {
         const fetchSettings = async () => {
             try {
-                const response = await fetch('https://mkprotaxbe.onrender.com/api/settings');
+                const response = await fetch('https://mkprotaxbe-52je.onrender.com/api/settings');
                 const data = await response.json();
                 if (data.status === 'success') {
                     setSettingsSocialURLs(data.data.socialMedia);

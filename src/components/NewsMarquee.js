@@ -9,7 +9,7 @@ const NewsMarquee = () => {
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                const response = await fetch('https://mkprotaxbe.onrender.com/api/news');
+                const response = await fetch('https://mkprotaxbe-52je.onrender.com/api/news');
                 if (!response.ok) {
                     throw new Error('Failed to fetch news');
                 }
