@@ -143,6 +143,10 @@
     right: -15px;
     display: none ;
 }
+.flex {
+    display: flex;
+    gap: 15px;;
+}
 @media only screen and (max-width: 767px) {
     .banner-one-inner {
         width: 90%;
@@ -151,14 +155,22 @@
     .banner-one .swiper-wrapper .swiper-slide  {
        background:#19875417 ;
     }
+    .flex {
+        display: flex;
+                gap: 10px;
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+
+        a {
+            margin-top: 10px!important;
+        }
+    }
 }
 .logo {
     margin-top:20px;
 }
-.flex {
-    display: flex;
-    gap: 15px;;
-}
+
 body {
     overflow-x:hidden!important;
 }
